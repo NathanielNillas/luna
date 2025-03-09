@@ -1,0 +1,227 @@
+h1,
+p {
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+
+}
+
+p {
+    padding: 10%;
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    /* Enable snap scrolling */
+    overflow-y: scroll;
+    /* Allow vertical scrolling */
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar in IE */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.section {
+    height: 100vh;
+    font-size: 2rem;
+    color: white;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+
+.start-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.start-div h1 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When this class is added, the h1 will appear and rise */
+.start-div.in-view h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.start-div h1 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.message-1 p {
+    text-align: center;
+    padding: 10%;
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.message-1.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10%;
+    align-items: center;
+}
+
+.circle-container .container {
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+}
+
+.center-text p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    font-size: clamp(1.5rem, 0.5rem + 2.6667vw, 2rem);
+}
+
+/* When this class is added, the h1 will appear and rise */
+.center-text.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure images are circles and do not stretch */
+.circle-image {
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    display: block;
+
+}
+
+@media screen and (max-width: 600px) {
+    .circle-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .circle-container .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 12%;
+        height: 50vh;
+        width: 80vh;
+    }
+
+    .center-text {
+        margin-bottom: 20%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .circle-image {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+
+        /* Ensure images fill their grid space */
+    }
+
+    .message-8 div iframe {
+        width: 90%;
+        height: 60vh
+    }
+}
+
+.container.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-2.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-3.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-4.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-5.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-6.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-7.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-8.in-view p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-8 div {
+    display: flex;
+    justify-content: center;
+}
